@@ -1,0 +1,77 @@
+body {
+    background-color: #f6f9fc;
+}
+
+h1 {
+    text-align: center;
+}
+
+button, input[type="button"] {
+    cursor: pointer;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    background-color: #02203c;
+    color: white;
+    transition: 0.5s;
+    position: absolute;
+}
+
+button:first-of-type, input[type="button"]:first-of-type {
+    margin-top: 10px;
+    left: 16px;
+}
+
+button:nth-of-type(2), input[type="button"]:last-of-type {
+    margin-top: 10px;
+    right: 16px;
+}
+
+button:disabled, input[type="button"]:disabled {
+    background-color: grey;
+}
+
+.answer {
+    cursor: pointer;
+    padding: 5px;
+    margin: 0;
+    border: 2px solid transparent;
+}
+
+.answer::before {
+    content: '';
+    display: inline-block;
+    width: 0.5em;
+    height: 0.5em;
+    padding: 1px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-right: 5px;
+    padding: 2px;
+}
+
+.answer.correct::before, .answer.incorrect::before {
+    background: black content-box; 
+}
+
+.correct {
+    border: 2px solid green;
+}
+
+.incorrect {
+    border: 2px solid red;
+}
+
+div.restart {
+    display: block;
+    position: absolute;
+    margin-top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.restart button {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
